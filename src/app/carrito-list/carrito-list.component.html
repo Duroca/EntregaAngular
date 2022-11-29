@@ -1,0 +1,7 @@
+<h2>Estos muebles estan en tu carrito</h2>
+
+<ul *ngFor="let mueble of (cartList$ | async)">
+    <li *ngIf="mueble.cantidad>0">
+        {{mueble.nombre}}: {{mueble.cantidad}}
+    </li>
+</ul>
